@@ -11,6 +11,14 @@
   height: auto;
 }
 
+.navbar{
+	font-family: 'Shrikhand';
+	font-size: 15px;
+}
+
+.reviewBox {
+	text-align: center;
+}
 /* Owl Carousel Bootstrap Custom CSS */
 
 /* Header Navigation */

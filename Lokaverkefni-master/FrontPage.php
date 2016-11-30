@@ -26,15 +26,7 @@
 
 	</head>
 
-	<body>	
-		<!--Font setting fyrir headerinn -->
-		<style>
-			nav {
-				font-family: 'Shrikhand';
-				font-size: 15px;
-			}
-		</style>
-
+	<body>
 		<!-- Navigation barinn. -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
@@ -78,7 +70,7 @@
                                 <input name="username" type="text" id="username" class="form-control" placeholder="Dæmi: Petur1" required autofocus>
                                 <div>Netfang:</div>
                                 <label for="inputEmail" class="sr-only">Netfang</label>
-                                <input name="email" type="text" id="email" class="form-control" placeholder="Petur1@hotmail.com" required autofocus>
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Petur1@hotmail.com" required autofocus>
                                 <div>Lykilorð:</div>
                                 <label for="inputPassword" class="sr-only">Lykilorð</label>
                                 <input name="password" type="password" id="password" class="form-control" placeholder="Lykilorð" required="10">
@@ -104,7 +96,7 @@
 		              <div class="modal-body">
 		                <form action="includes/innskra.php" method="POST" class="form-signin">
 		                	<label for="inputUsername" class="sr-only">Notendanafn</label>
-		                	<input name="username" type="username" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
+		                	<input name="username" type="text" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
 		                	<label for="inputPassword" class="sr-only">Lykilorð</label>
 		                	<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Lykilorð" required="10">
 		                	<button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>
@@ -152,7 +144,6 @@
 		      </div>
 	    	</div>
 	    </section>
-
 
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

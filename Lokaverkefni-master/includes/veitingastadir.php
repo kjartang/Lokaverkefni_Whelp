@@ -9,6 +9,6 @@
 	         echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " " . $row["open"] . "<br>";
 	     }
 	} else {
-	     echo "0 results";
+	     echo "No restaurants in Database";
 	}
 ?>
