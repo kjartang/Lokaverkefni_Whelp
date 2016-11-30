@@ -1,21 +1,20 @@
 <?php
-	 	include "connect.php";
-	 
-	 	$name = $_POST['name'];
-	 	$username = $_POST['username'];
-	 	$email = $_POST['email'];
-	 	$password = $_POST['password'];
 
-	 	$name = mysqli_real_escape_string($conn, $name);
-	 	$username = mysqli_real_escape_string($conn, $username);
-	 	$email = mysqli_real_escape_string($conn, $email);
-	 	$password = mysqli_real_escape_string($conn, $password);
+if (isset($_POST['nyskra'])) {
+ include "connect.php";
+ include "FrontPage.php";
+ 
+	$sql = "INSERT INTO user (name, username, email, password) VALUES ('".$_POST["name"]."','".$_POST["username"]."','".$_POST["email"]."','".$_POST["password"]."')";
 
-		$result = "INSERT INTO user (name, username, email, password) VALUES('$name', '$username', '$email', '$password')" or die("Failed to query database ".mysqli_error($conn));
-
-		if ($conn->query($result) === TRUE) {
-		    header("Location: ../FrontPage.php");
-		} else {
-		    echo "Error: " . $result . "<br>" . $conn->error;
-		}
+	$data = mysqli_fetch_array($sql, MYSQLI_NUM);
+	if($data[0] > 1) {
+	    echo "User Already in Exists<br/>";
+	}
+	else if ($conn->query($sql) === TRUE) {
+		header("location:LoggedIn.php ");
+	    echo "New user created successfully";
+	} else {
+	    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+}
 ?>

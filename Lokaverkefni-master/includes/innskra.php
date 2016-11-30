@@ -1,5 +1,8 @@
 <?php
+	session_start();
  	include "connect.php";
+	
+	$_SESSION['username'] = $username;
 
  	$username = $_POST['username'];
  	$password = $_POST['password'];
@@ -12,9 +15,11 @@
 	$row = mysqli_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password)
 	{
-		header("Location: LoggedIn.php");
+		header("Location: ../LoggedIn.php");
 	}
 	else {
 		echo "Failed to login!";
 	}
+
+
 ?>
