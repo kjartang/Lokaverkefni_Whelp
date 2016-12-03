@@ -1,4 +1,8 @@
-﻿<?php include "includes/connect.php" ?>
+﻿<?php 
+include "includes/connect.php"; 
+include "includes/nyskra.php";
+include "includes/innskra.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -46,7 +50,7 @@
 
 		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
-				<input type="text" value="Veitingastadir.." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
+				<input type="text" placeholder="Veitingastad"  name="search" class="form-control" maxlength="30" onfocus="this.value=''" required>
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>	
@@ -61,20 +65,20 @@
                             <h4 class="modal-title" id="myModalLabel">Nýskráning</h4>
                           </div>
                           <div class="modal-body">
-                            <form action="includes/nyskra.php" method="POST" class="form-signin">
+                            <form action="" method="POST" class="form-signin">
                             	<div>Nafn:</div>
                                 <label for="name" class="sr-only">Nafn</label>
-                                <input name="name" type="text" id="name" class="form-control" placeholder="Dæmi: Pétur" required autofocus>
+                                <input name="name" type="text" id="name" class="form-control" required autofocus>
                                 <div>Notendanafn:</div>
                                 <label for="username" class="sr-only">Notendanafn</label>
-                                <input name="username" type="text" id="username" class="form-control" placeholder="Dæmi: Petur1" required autofocus>
+                                <input name="username" type="text" id="username" class="form-control" required autofocus>
                                 <div>Netfang:</div>
                                 <label for="inputEmail" class="sr-only">Netfang</label>
-                                <input name="email" type="email" id="email" class="form-control" placeholder="Petur1@hotmail.com" required autofocus>
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Dæmi@gmail.com" required autofocus>
                                 <div>Lykilorð:</div>
                                 <label for="inputPassword" class="sr-only">Lykilorð</label>
-                                <input name="password" type="password" id="password" class="form-control" placeholder="Lykilorð" required="10">
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>       
+                                <input name="password" type="password" id="password" class="form-control" placeholder="**********" required="10">
+                                <button class="btn btn-lg btn-primary btn-block" name="nyskra" id="nyskra" type="submit">Innskrá</button>       
                             </form>
                            <div class="modal-footer">
 				              <div class="modal-footer">
@@ -94,12 +98,12 @@
 		                <h4 class="modal-title" id="myModalLabel">Innskráning</h4>
 		              </div>
 		              <div class="modal-body">
-		                <form action="includes/innskra.php" method="POST" class="form-signin">
+		                <form action="" method="POST" class="form-signin">
 		                	<label for="inputUsername" class="sr-only">Notendanafn</label>
 		                	<input name="username" type="text" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
 		                	<label for="inputPassword" class="sr-only">Lykilorð</label>
 		                	<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Lykilorð" required="10">
-		                	<button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>
+		                	<button class="btn btn-lg btn-primary btn-block" name="innskra" id"innskra" type="submit">Innskrá</button>
 		                </form>
 		              </div>
 		              <div class="modal-footer">
@@ -121,7 +125,7 @@
 			            <img class="owl-lazy" data-src="images/ThisIsSubway.png" data-src-retina="images/owl2.jpg1-retina" alt="">
 			            <img class="owl-lazy" data-src="images/KfcLogoMan.png" data-src-retina="images/owl2.jpg2-retina" alt="">
 			            <img class="owl-lazy" data-src="images/DominosLogo.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl4.jpg" alt="">
+			            <img class="owl-lazy" data-src="images/Hlollabatar.png" alt="">
 			            <img class="owl-lazy" data-src="images/owl5.jpg" alt="">
 			            <img class="owl-lazy" data-src="images/owl6.jpg" alt="">
 			            <img class="owl-lazy" data-src="images/owl7.jpg" alt="">

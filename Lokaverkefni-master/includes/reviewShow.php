@@ -1,15 +1,16 @@
 <?php
-
+	include "connect.php";
 	mb_language('uni');
 	mb_internal_encoding('UTF-8');
 	 
-	$getquery=mysql_query("SELECT review FROM review ORDER BY reviewId DESC");
-	while($rows=mysql_fetch_assoc($getquery))
+	$getquery=mysqli_query($conn, "SELECT reviewName, review, reviewDate FROM review ORDER BY reviewId DESC");
+	while($rows=mysqli_fetch_assoc($getquery))
 	{
 
-	$name=$rows['name'];
+	$name=$rows['reviewName'];
+	$date=$rows['reviewDate'];
 	$comment=$rows['review'];
-	echo $name . '<br/>' . '<br/>' . $comment . '<br/>' . '<br/>' . '<hr size="1"/>'
+	echo $name . '<br/>' . $date . '<br/>' . $comment . '<br/>' . '<br/>' . '<hr size="1"/>'
 	;}
 
 ?>

@@ -1,23 +1,23 @@
 <?php
-	 	include "connect.php";
-	 
-	 	$name = $_POST['name'];
-	 	$username = $_POST['username'];
-	 	$email = $_POST['email'];
-	 	$password = $_POST['password'];
+	 	if (isset($_POST["nyskra"])) {
 
-	 	$name = mysqli_real_escape_string($conn, $name);
-	 	$username = mysqli_real_escape_string($conn, $username);
-	 	$email = mysqli_real_escape_string($conn, $email);
-	 	$password = mysqli_real_escape_string($conn, $password);
+		 	$name = $_POST['name'];
+		 	$username = $_POST['username'];
+		 	$email = $_POST['email'];
+		 	$password = $_POST['password'];
 
-		$result = "INSERT INTO user (name, username, email, password) VALUES('$name', '$username', '$email', '$password')" or die("Failed to query database ".mysqli_error($conn));
+		 	$name = mysqli_real_escape_string($conn, $name);
+		 	$username = mysqli_real_escape_string($conn, $username);
+		 	$email = mysqli_real_escape_string($conn, $email);
+		 	$password = mysqli_real_escape_string($conn, $password);
 
-		if ($conn->query($result) === TRUE) {
-		    header("Location: ../FrontPage.php");
-		    echo "lul";
-		} else {
-		    echo "Error: " . $result . "<br>" . $conn->error;
+			$result = "INSERT INTO user (name, username, email, password) VALUES('$name', '$username', '$email', '$password')" or die("Failed to query database ".mysqli_error($conn));
+
+			if ($conn->query($result) === TRUE) {
+				echo "<script type='text/javascript'>alert('Notandi skráður!')</script>";
+			} else {
+			    echo "Error: " . $result . "<br>" . $conn->error;
+			}
 		}
-		
+
 ?>
