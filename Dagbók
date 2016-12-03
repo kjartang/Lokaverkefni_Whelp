@@ -15,6 +15,14 @@ virkni með MYSQLI og kláraði nýskráninguna.
 Dagur 6 Mán: Vann á innskráningunni og kláraði það, vann svo smá í útlitinu.
 
 Dagur 7 Þri: Reyndi að fatta hvernig átti að gera útskráningu án þess að þurfa breyta um síðu, tók of langan tíma þannig ég gerði bara
-aðra síðu sem þú kemst á þegar það er búið að innskráa sig.
+aðra síðu sem þú kemst á þegar það er búið að innskrá sig.
 
-Dagur 8 Mið: 
+Dagur 8 Mið: Reyndi að sameina login formið og login phpið sjálft svo að það væri miklu snyrtilegra, en endaði með því að það gerði fleirri
+vandamál svo ég sleppti því, eftir að reyna að finna lausnir.
+
+Dagur 9 Fim: Gerði admin síðu fyrir okkur til þess að geta sett inn veitingastaði miklu fljótar, og var svo að hugsa um hvernig
+ég átti að sameina því með mynd af veitingastaðnum.
+
+Dagur 10 Fös: Af einhverri ástæðu hætti innskráningin og nýskrain að virka, og náði að laga það og snirti validations á login forminu.
+
+Dagur 11 Mán: 
