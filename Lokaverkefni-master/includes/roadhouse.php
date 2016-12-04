@@ -1,5 +1,5 @@
-﻿<?php session_start(); ?>
-<?php include "includes/connect.php" ?>
+<?php session_start(); ?>
+<?php include "connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,21 +9,21 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="../css/bootstrap.min.css">
  	   	
 	    <!-- Owl Stylesheets -->
-	    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-	    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+	    <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
+	    <link rel="stylesheet" href="../owlcarousel/assets/owl.theme.default.min.css">
 
  	   	<!-- Costum made -->
- 	   	<link rel="stylesheet" type="text/css" media="all" href="css/costum.css">
+ 	   	<link rel="stylesheet" type="text/css" media="all" href="../css/costum.css">
 		
 		<!-- Special font -->
 		<link href="http://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet" type="text/css" />
 
 		<!-- javascript -->
-		<script src="vendors/jquery.min.js"></script>
-	    <script src="owlcarousel/owl.carousel.js"></script>
+		<script src="../vendors/jquery.min.js"></script>
+	    <script src="../owlcarousel/owl.carousel.js"></script>
 
 	</head>
 
@@ -47,13 +47,13 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="Frontpage.php">Whelp</a>
+		      <a class="navbar-brand" href="../Frontpage.php">Whelp</a>
 		    </div>
 		 
 
 		      </ul>
 
-		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
+		      <form action="SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
 				<input type="text" value="Veitingastadir.." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
@@ -70,7 +70,7 @@
                             <h4 class="modal-title" id="myModalLabel">Nýskráning</h4>
                           </div>
                           <div class="modal-body">
-                            <form action="includes/nyskra.php" method="POST" class="form-signin">
+                            <form action="nyskra.php" method="POST" class="form-signin">
                             	<div>Nafn:</div>
                                 <label for="name" class="sr-only">Nafn</label>
                                 <input name="name" type="text" id="name" class="form-control" placeholder="Dæmi: Pétur" required autofocus>
@@ -103,7 +103,7 @@
 		                <h4 class="modal-title" id="myModalLabel">Innskráning</h4>
 		              </div>
 		              <div class="modal-body">
-		                <form action="includes/innskra.php" method="POST" class="form-signin">
+		                <form action="innskra.php" method="POST" class="form-signin">
 		                	<label for="inputUsername" class="sr-only">Notendanafn</label>
 		                	<input name="username" type="username" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
 		                	<label for="inputPassword" class="sr-only">Lykilorð</label>
@@ -125,136 +125,72 @@
 		 <div class="row">
 		  <div class="col-md-3">
 		    <div class="thumbnail">
-		    <div id="display_subway">
-		        <img src="images/ThisIsSubway.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_subway" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_subway");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_subway">
-					</div>
-		        </div>
-		       </div>
-		    </div>
-		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
 		      <div id="display">
-		        <img src="images/002.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_para");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_para">
-					</div>
+		        <img src="../images/002.png" alt="Lights" style="width:100%">
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		      <div id="display_kfc">
-		        <img src="images/KfcLogoMan.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_kfc" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_kfc");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_kfc">
-					</div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		      <div id="display_hamborgarafabrikkan">
-		        <img src="images/HamborgaraFabrikkan.png" alt="Nature" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_hamborgarafabrikkan" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_hamborgarafabrikkan");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_hamborgarafabrikkan">
-					</div>
-		        </div>
-		      </a>
-		    </div>
-		  </div>
+	   <div class="col-md-1">
+		   <?php 	
+			    $sql = "SELECT location, open FROM restaurant_info WHERE location like '%Höfðatorg%'";
+				$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+						     // output data of each row
+						     while($row = $result->fetch_assoc()) {
+						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
+						     }
+						} else {
+						     echo "0 results";
+						} 
+			?>
 		</div>
-	   
-	    <?php
-			//echo '<img src="http://tsuts.tskoli.is/2t/2804963169/Lokaverkefni'. $_SESSION["newsession"] . '"alt="Image not found">';
-			//echo "<br> Restaurants: ". $_SESSION["namesession"]. "<br>";
-	    ?>
+		<div class="col-md-1">
+			<?php 	
+				$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Kringlan%'";
+				$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+						     // output data of each row
+						     while($row = $result->fetch_assoc()) {
+						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
+						     }
+						} else {
+						     echo "0 results";
+						} 
+			?>
+		</div>
+		<div class="col-md-1">
+		    <?php
+		    	$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Akureyri%'";
+				$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+						     // output data of each row
+						     while($row = $result->fetch_assoc()) {
+						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
+						     }
+						} else {
+						     echo "0 results";
+						} 
+		    ?>
+	    </div>
 
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script src="//code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/owl.carousel.js"></script> 
-		<script src="js/bootstrap-collapse.js"></script>
-    	<script src="js/bootstrap-transition.js"></script>
-    	<script src="js/bootstrap-tab.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/owl.carousel.js"></script> 
+		<script src="../js/bootstrap-collapse.js"></script>
+    	<script src="../js/bootstrap-transition.js"></script>
+    	<script src="../js/bootstrap-tab.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
-		<script type="js/costum.js"></script>
+		<script type="../js/costum.js"></script>
 
 		<!-- Vendors -->
-	    <script src="vendors/highlight.js"></script>
-	    <script src="js/app.js"></script>
+	    <script src="../vendors/highlight.js"></script>
+	    <script src="../js/app.js"></script>
 
 	</body>
 </html>
