@@ -17,12 +17,23 @@ Dagur 6 Mán: Vann á innskráningunni og kláraði það, vann svo smá í útl
 Dagur 7 Þri: Reyndi að fatta hvernig átti að gera útskráningu án þess að þurfa breyta um síðu, tók of langan tíma þannig ég gerði bara
 aðra síðu sem þú kemst á þegar það er búið að innskrá sig.
 
-Dagur 8 Mið: Reyndi að sameina login formið og login phpið sjálft svo að það væri miklu snyrtilegra, en endaði með því að það gerði fleirri
-vandamál svo ég sleppti því, eftir að reyna að finna lausnir.
+Dagur 8 Mið: Reyndi að sameina login formið og login phpið , en endaði með því að það gerði fleirrivandamál svo ég sleppti því. Vann á
+Admin síðu fyrir mig og Bjarka.
 
-Dagur 9 Fim: Gerði admin síðu fyrir okkur til þess að geta sett inn veitingastaði miklu fljótar, og var svo að hugsa um hvernig
-ég átti að sameina því með mynd af veitingastaðnum.
+Dagur 9 Fim: Vann meira á admin síðuni fyrir okkur til þess að geta sett inn veitingastaði miklu fljótar, og var svo að hugsa um hvernig
+ég reyndi að sameina því með mynd af veitingastaðnum.
 
 Dagur 10 Fös: Af einhverri ástæðu hætti innskráningin og nýskrain að virka, og náði að laga það og snirti validations á login forminu.
 
-Dagur 11 Mán: 
+Dagur 11 Mán: Var að klára að setja includes inní FrontPage og Admin síðuna til að hafa hluti aðeins snyrtilegra.
+
+Dagur 12 Þri: Lenti í vandamálum með include-inn, reyndi að finna út úr því en endaði með því að skipta til baka, kláraði að búa til 
+review innsetningu fyrir notendur, og líka byrtingu.
+
+Dagur 13 Mið: Loksins fann út úr vandamálinu og kláraði includes og hafði allt snyrtilegt.
+
+Dagur 14 Fim: Vann á admin síðunni, til að geta eytt veitingastaði frá gagnagrunni (kláraði það ekki).
+
+Dagur 15 Fös: Var að reyna klára eyðingu á veitingastöðum á admin síðunni en hafði ekki nægan tíma, og fór í að snyrta vefsíðuna og gera
+hana aðeins nothæfari fyrir notendur (popup gluggar fyrir vitlaus innskráningar upplýsingar og líka nýskrá, laga placeholders og 
+setja inn review inputs og review sýningar).
