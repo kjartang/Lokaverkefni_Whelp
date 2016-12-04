@@ -1,8 +1,5 @@
-﻿<?php 
-include "includes/connect.php"; 
-include "includes/nyskra.php";
-include "includes/innskra.php";
-?>
+﻿<?php session_start(); ?>
+<?php include "includes/connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -30,9 +27,17 @@ include "includes/innskra.php";
 
 	</head>
 
-	<body>
+	<body>	
+		<!--Font setting fyrir headerinn -->
+		<style>
+			nav {
+				font-family: 'Shrikhand';
+				font-size: 15px;
+			}
+		</style>
+
 		<!-- Navigation barinn. -->
-		<nav class="navbar navbar-default">
+		<nav class="navbar-inverse">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -50,7 +55,7 @@ include "includes/innskra.php";
 
 		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
-				<input type="text" placeholder="Veitingastad"  name="search" class="form-control" maxlength="30" onfocus="this.value=''" required>
+				<input type="text" value="Veitingastadir.." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>	
@@ -65,20 +70,20 @@ include "includes/innskra.php";
                             <h4 class="modal-title" id="myModalLabel">Nýskráning</h4>
                           </div>
                           <div class="modal-body">
-                            <form action="" method="POST" class="form-signin">
+                            <form action="includes/nyskra.php" method="POST" class="form-signin">
                             	<div>Nafn:</div>
                                 <label for="name" class="sr-only">Nafn</label>
-                                <input name="name" type="text" id="name" class="form-control" required autofocus>
+                                <input name="name" type="text" id="name" class="form-control" placeholder="Dæmi: Pétur" required autofocus>
                                 <div>Notendanafn:</div>
                                 <label for="username" class="sr-only">Notendanafn</label>
-                                <input name="username" type="text" id="username" class="form-control" required autofocus>
+                                <input name="username" type="text" id="username" class="form-control" placeholder="Dæmi: Petur1" required autofocus>
                                 <div>Netfang:</div>
                                 <label for="inputEmail" class="sr-only">Netfang</label>
-                                <input name="email" type="email" id="email" class="form-control" placeholder="Dæmi@gmail.com" required autofocus>
+                                <input name="email" type="text" id="email" class="form-control" placeholder="Petur1@hotmail.com" required autofocus>
                                 <div>Lykilorð:</div>
                                 <label for="inputPassword" class="sr-only">Lykilorð</label>
-                                <input name="password" type="password" id="password" class="form-control" placeholder="**********" required="10">
-                                <button class="btn btn-lg btn-primary btn-block" name="nyskra" id="nyskra" type="submit">Innskrá</button>       
+                                <input name="password" type="password" id="password" class="form-control" placeholder="Lykilorð" required="10">
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>       
                             </form>
                            <div class="modal-footer">
 				              <div class="modal-footer">
@@ -98,12 +103,12 @@ include "includes/innskra.php";
 		                <h4 class="modal-title" id="myModalLabel">Innskráning</h4>
 		              </div>
 		              <div class="modal-body">
-		                <form action="" method="POST" class="form-signin">
+		                <form action="includes/innskra.php" method="POST" class="form-signin">
 		                	<label for="inputUsername" class="sr-only">Notendanafn</label>
-		                	<input name="username" type="text" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
+		                	<input name="username" type="username" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
 		                	<label for="inputPassword" class="sr-only">Lykilorð</label>
 		                	<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Lykilorð" required="10">
-		                	<button class="btn btn-lg btn-primary btn-block" name="innskra" id"innskra" type="submit">Innskrá</button>
+		                	<button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>
 		                </form>
 		              </div>
 		              <div class="modal-footer">
@@ -117,37 +122,121 @@ include "includes/innskra.php";
 		</nav>
 
 	    <!--  Myndaramminn -->
-	    <section id="demos">
-	    	<div class="container-fluid">
-		      <div class="row">
-		        <div class="col-md-12">
-		          <div class="owl-carousel owl-theme">
-			            <img class="owl-lazy" data-src="images/ThisIsSubway.png" data-src-retina="images/owl2.jpg1-retina" alt="">
-			            <img class="owl-lazy" data-src="images/KfcLogoMan.png" data-src-retina="images/owl2.jpg2-retina" alt="">
-			            <img class="owl-lazy" data-src="images/DominosLogo.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/Hlollabatar.png" alt="">
-			            <img class="owl-lazy" data-src="images/owl5.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl6.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl7.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl8.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl1.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl2.jpg" alt="">
-			            <img class="owl-lazy" data-src="images/owl3.jpg" alt="">
-		          </div>
-		          <script>
-		            jQuery(document).ready(function($) {
-		              $('.owl-carousel').owlCarousel({
-		                items: 6,
-		                lazyLoad: true,
-		                loop: true,
-		                margin: 10
-		              });
-		            });
-		          </script>
+		 <div class="row">
+		  <div class="col-md-3">
+		    <div class="thumbnail">
+		    <div id="display_subway">
+		        <img src="images/ThisIsSubway.png" alt="Lights" style="width:100%">
+		        <div class="caption">
+					<script type="text/javascript">
+						$( "#display_subway" ).one("click", function() {
+					        $.ajax({    //create an ajax request to load_page.php
+						        type: "GET",
+						        url: "includes/veitingastadir.php",             
+						        dataType: "html",   //expect html to be returned                
+						        success: function(response){                    
+						            $("#responsecontainer").html(response); 
+						            var content = document.getElementById("result_subway");
+						            content.innerHTML = content.innerHTML+response;
+
+						        }
+
+						    });
+						});
+					</script>
+					<div id="result_subway">
+					</div>
+		        </div>
+		       </div>
+		    </div>
+		  </div>
+		  <div class="col-md-3">
+		    <div class="thumbnail">
+		      <div id="display">
+		        <img src="images/002.png" alt="Lights" style="width:100%">
+		        <div class="caption">
+					<script type="text/javascript">
+						$( "#display" ).one("click", function() {
+					        $.ajax({    //create an ajax request to load_page.php
+						        type: "GET",
+						        url: "includes/veitingastadir.php",             
+						        dataType: "html",   //expect html to be returned                
+						        success: function(response){                    
+						            $("#responsecontainer").html(response); 
+						            var content = document.getElementById("result_para");
+						            content.innerHTML = content.innerHTML+response;
+
+						        }
+
+						    });
+						});
+					</script>
+					<div id="result_para">
+					</div>
 		        </div>
 		      </div>
-	    	</div>
-	    </section>
+		    </div>
+		  </div>
+		  <div class="col-md-3">
+		    <div class="thumbnail">
+		      <div id="display_kfc">
+		        <img src="images/KfcLogoMan.png" alt="Lights" style="width:100%">
+		        <div class="caption">
+					<script type="text/javascript">
+						$( "#display_kfc" ).one("click", function() {
+					        $.ajax({    //create an ajax request to load_page.php
+						        type: "GET",
+						        url: "includes/veitingastadir.php",             
+						        dataType: "html",   //expect html to be returned                
+						        success: function(response){                    
+						            $("#responsecontainer").html(response); 
+						            var content = document.getElementById("result_kfc");
+						            content.innerHTML = content.innerHTML+response;
+
+						        }
+
+						    });
+						});
+					</script>
+					<div id="result_kfc">
+					</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-md-3">
+		    <div class="thumbnail">
+		      <div id="display_hamborgarafabrikkan">
+		        <img src="images/HamborgaraFabrikkan.png" alt="Nature" style="width:100%">
+		        <div class="caption">
+					<script type="text/javascript">
+						$( "#display_hamborgarafabrikkan" ).one("click", function() {
+					        $.ajax({    //create an ajax request to load_page.php
+						        type: "GET",
+						        url: "includes/veitingastadir.php",             
+						        dataType: "html",   //expect html to be returned                
+						        success: function(response){                    
+						            $("#responsecontainer").html(response); 
+						            var content = document.getElementById("result_hamborgarafabrikkan");
+						            content.innerHTML = content.innerHTML+response;
+
+						        }
+
+						    });
+						});
+					</script>
+					<div id="result_hamborgarafabrikkan">
+					</div>
+		        </div>
+		      </a>
+		    </div>
+		  </div>
+		</div>
+	   
+	    <?php
+			//echo '<img src="http://tsuts.tskoli.is/2t/2804963169/Lokaverkefni'. $_SESSION["newsession"] . '"alt="Image not found">';
+			//echo "<br> Restaurants: ". $_SESSION["namesession"]. "<br>";
+	    ?>
 
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

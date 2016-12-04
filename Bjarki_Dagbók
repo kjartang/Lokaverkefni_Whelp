@@ -1,0 +1,20 @@
+Dagur 1 Mán: Ég og Kjartan vorum að hugsa um hugmyndir um hvað við ætluðum að gera, og komumst að því að gera vefsíðu.
+
+Dagur 2 Þri: Töluðum betur og ákvaðum að gera íslenska útgáfu af Yelp.com sem er síða með alskonar upplýsingum um veitingastaði, og
+byrjaði að gera gagnagrunninn í MYSQL.
+
+Dagur 3 Mið: Setti upp verkefna síðuna, Setti inn header og setti upp bootstrap plugin fyrir look.
+
+Dagur 4 Fim: Vann í að gera login/Sign up form sem var modal. Byrjaði svo að vinna í file upload fyrir Database og folder.
+
+Dagur 5 Fös: Kláraði File uploadið, fékk filinn til þess að vistast í images/ og pathið vistaðist í DB.
+
+Dagur 6 Mán: Byrjaði að gera searchbar functionality, var að reyna að fá image path úr db yfir í echo.
+
+Dagur 7 Þri: Hélt áfram að vinna í searchbar funcionality og fékk það til þess að virka með session.
+
+Dagur 8 Mið: Vann í frontpage'inu go setti upp owl carousel fyrir images sem áttu að birtast á síðunni.
+
+Dagur 9 Fim: Byrjaði að ná í images frá DB og birta í columns á frontpage, reyndi svo að gera það sama með gögn.
+
+Dagur 10 Mán: Byrjaði að reyna að nota jquery til þess að birta gögn on click. Enaði á að nota .one fyrir simple one time click availability.
