@@ -6,14 +6,25 @@
 		<title>Whelp</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
- 		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-responsive.min.css">
- 	    	<link rel="stylesheet" type="text/css" media="all" href="css/global.css">
+ 	   	
+	    <!-- Owl Stylesheets -->
+	    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
+ 	   	<!-- Costum made -->
+ 	   	<link rel="stylesheet" type="text/css" media="all" href="css/costum.css">
+		
+		<!-- Special font -->
 		<link href="http://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" media="all" href="css/costum.css">
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- javascript -->
+		<script src="vendors/jquery.min.js"></script>
+	    <script src="owlcarousel/owl.carousel.js"></script>
+
 	</head>
 
 	<body>	

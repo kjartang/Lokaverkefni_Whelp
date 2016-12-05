@@ -96,7 +96,7 @@ include "uploadRestaurant.php";
 			<form action="eydaVeitingastadi.php" method="post">
 			<div class="page-header">
 				<h2>Eyða veitingastaði</h2>
-				<?php include "veitingastadir.php" ?>
+				<?php include "adminVeitingastadir.php" ?>
 			</div>
 			<div class="form-group row">
 		      <div class="offset-sm-2 col-sm-10">
