@@ -6,8 +6,15 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 .reviews {
-	
+	clear:left;
+	padding-top: 100px;
+}
+.nafnReview {
+
+}
+.dagsetningReview {
+	color: grey;
 }
 .upplysingarV {
 	clear: left;
-}
+}		

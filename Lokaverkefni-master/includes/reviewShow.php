@@ -10,7 +10,6 @@
 	$name=$rows['reviewName'];
 	$date=$rows['reviewDate'];
 	$comment=$rows['review'];
-	echo $name . '<br/>' . $date . '<br/>' . $comment . '<br/>' . '<br/>' . '<hr size="1"/>'
-	;}
-
+	echo '<b> ' . $name . '</b></br><p>' . $date . '</p></br>' . $comment . '<br/><br/>' . '<hr size="1"/>';
+    }
 ?>
