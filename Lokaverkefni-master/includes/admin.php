@@ -41,7 +41,7 @@ include "uploadRestaurant.php";
 
 		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
-				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
+				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" required onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>
