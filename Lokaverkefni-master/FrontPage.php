@@ -119,7 +119,7 @@ include "includes/innskra.php";
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-	    <!--  Myndaramminn -->
+	     <!--  Myndaramminn -->
 		 <div class="row">
 		  <div class="col-md-3">
 		    <div class="thumbnail">
@@ -130,7 +130,7 @@ include "includes/innskra.php";
 						$( "#display_subway" ).one("click", function() {
 					        $.ajax({    //create an ajax request to load_page.php
 						        type: "GET",
-						        url: "includes/veitingastadir.php",             
+						        url: "includes/veitingastadir_subway.php",             
 						        dataType: "html",   //expect html to be returned                
 						        success: function(response){                    
 						            $("#responsecontainer").html(response); 
@@ -184,7 +184,7 @@ include "includes/innskra.php";
 						$( "#display_kfc" ).one("click", function() {
 					        $.ajax({    //create an ajax request to load_page.php
 						        type: "GET",
-						        url: "includes/veitingastadir.php",             
+						        url: "includes/veitingastadir_kfc.php",             
 						        dataType: "html",   //expect html to be returned                
 						        success: function(response){                    
 						            $("#responsecontainer").html(response); 
@@ -230,6 +230,7 @@ include "includes/innskra.php";
 		    </div>
 		  </div>
 		</div>
+	   
 	   
 	    <?php
 			//echo '<img src="http://tsuts.tskoli.is/2t/2804963169/Lokaverkefni'. $_SESSION["newsession"] . '"alt="Image not found">';
