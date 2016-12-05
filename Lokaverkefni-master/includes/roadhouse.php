@@ -122,7 +122,6 @@
 		</nav>
 
 	    <!--  Myndaramminn -->
-		 <div class="row">
 		  <div class="col-md-3">
 		    <div class="thumbnail">
 		      <div id="display">
@@ -130,7 +129,7 @@
 		        </div>
 		      </div>
 		    </div>
-		  </div>
+		<div class="upplysingarV">
 	   <div class="col-md-1">
 		   <?php 	
 			    $sql = "SELECT location, open FROM restaurant_info WHERE location like '%Höfðatorg%'";
@@ -173,6 +172,13 @@
 						} 
 		    ?>
 	    </div>
+	    </div>
+		
+
+	    <div class="reviews">
+	    	<?php include "reviewShow.php" ?>
+		</div>
+
 
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

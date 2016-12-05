@@ -16,7 +16,7 @@
 			if ($conn->query($result) === TRUE) {
 				echo "<script type='text/javascript'>alert('Notandi skráður!')</script>";
 			} else {
-			    echo "Error: " . $result . "<br>" . $conn->error;
+			    echo "<script type='text/javascript'>alert('Eitthvað var að innskráninguni, kíktu hvort upplýsingarnar gefnar voru réttar.')</script>"
 			}
 		}
 

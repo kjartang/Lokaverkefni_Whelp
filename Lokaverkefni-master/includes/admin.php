@@ -1,6 +1,7 @@
 <?php 
 include "connect.php"; 
 include "uploadRestaurant.php";
+include "eydaVeitingastadi.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@ include "uploadRestaurant.php";
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="../Frontpage.php">Whelp</a>
+		      <a class="navbar-brand" href="admin.php">Whelp</a>
 		    </div>
 		 
 
@@ -41,7 +42,7 @@ include "uploadRestaurant.php";
 
 		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
-				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" required onfocus="this.value=''">
+				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>
@@ -58,7 +59,7 @@ include "uploadRestaurant.php";
 			<div class="page-header">
 				<h2>Setja inn veitingastað</h2>
 			</div>
-		  <form action="uploadRestaurant.php" method="post">
+		  <form action="" method="post">
 		    <div class="form-group row">
 		      <label for="inputName" class="col-sm-2 col-form-label">Nafn</label>
 		      <div class="col-sm-10">
@@ -93,14 +94,18 @@ include "uploadRestaurant.php";
 		</div>
 
 		<div class="container">
-			<form action="eydaVeitingastadi.php" method="post">
+			<form action="" method="post">
 			<div class="page-header">
 				<h2>Eyða veitingastaði</h2>
 				<?php include "adminVeitingastadir.php" ?>
 			</div>
 			<div class="form-group row">
+		      <label for="inputName" class="col-sm-2 col-form-label">ID á Veitingastað</label>
+		        <input type="text" class="form-control" id="id" name="id" required>
+		    </div>
+			<div class="form-group row">
 		      <div class="offset-sm-2 col-sm-10">
-		        <button type="submit" name="eyða" class="btn btn-primary">Eyða</button>
+		        <button type="submit" name="eydaVeiting" id="eydaVeiting" class="btn btn-primary">Eyða</button>
 		      </div>
 		    </div>
 		    </form>

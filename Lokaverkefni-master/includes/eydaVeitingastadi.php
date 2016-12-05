@@ -1,15 +1,16 @@
 <?php
-	include "connect.php"
+if (isset($_POST["eydaVeiting"])) {
 
 	$id = $_POST['id'];
 
 	$id = mysqli_real_escape_string($conn, $id);
 
-	$result = "DELETE FROM restaurants WHERE id='$id'" or die("Failed to query database ".mysqli_error($conn));
+	$result = "DELETE FROM restaurants WHERE id = '$id'" or die("Failed to query database ".mysqli_error($conn));
 
 	if ($conn->query($result) === TRUE) {
-	    echo "Record deleted successfully";
+	    echo "<script type='text/javascript'>alert('Veitingastadur eyddur!')</script>";
 	} else {
-	    echo "Error deleting record: " . $conn->error;
+	    echo "<script type='text/javascript'>alert('Rangar upplýsingar!')</script>";
 	}
+}
 ?>
