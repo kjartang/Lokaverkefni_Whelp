@@ -18,3 +18,15 @@ Dagur 8 Mið: Vann í frontpage'inu go setti upp owl carousel fyrir images sem �
 Dagur 9 Fim: Byrjaði að ná í images frá DB og birta í columns á frontpage, reyndi svo að gera það sama með gögn.
 
 Dagur 10 Mán: Byrjaði að reyna að nota jquery til þess að birta gögn on click. Enaði á að nota .one fyrir simple one time click availability.
+
+dagur 11 Þri: Endaði á að hætta við Jquery því ég ákvað að það væri auðveldara að geta bara haft takka sem tekur mann á info page.
+
+dagur 12 mið: Vann við að gera if(isset) fyrir image display sem notar path_image úr db sem er strengur úr uploadImage.php, semsagt ef maður
+ýtir á searchbar og searchar eftir item, þá er það specific item = WHERE LIKE '%"searchið"%' displayað, en ef maður searchar ekki sem er sett
+í else eftir if(isset) þá koma allar myndir upp. SELECT * FROM storedimages.
+
+dagur 13 fim: gerði dropdown lista fyrir reviews, sem er gert úr database og notfærir sér bootstrap, það sér einnig um að specifya hvaða
+restaurant maður vill gera review um.
+
+dagur 14 fös: Smá style work til þess að fá allt til þess að lýta aðeins betur út, en lítill tími var eftir.
+
