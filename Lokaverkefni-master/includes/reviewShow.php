@@ -10,6 +10,7 @@
 	$name=$rows['reviewName'];
 	$date=$rows['reviewDate'];
 	$comment=$rows['review'];
-	echo '<b> ' . $name . '</b></br><p>' . $date . '</p></br>' . $comment . '<br/><br/>' . '<hr size="1"/>';
-    }
+	echo 'Nafn skrifanda: ' . $name . '<br/> Dagsetnig: <br/>' . $date . '<br/> Ummæli: <br/>' . $comment . '<br/>' . '<br/>' . '<hr size="1"/>'
+	;}
+
 ?>

@@ -1,4 +1,4 @@
-<?php include "includes/connect.php" ?>
+<?php include "connect.php" ?>
 <?php session_start() ?>
 <!DOCTYPE html>
 <html>
@@ -9,21 +9,21 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="../css/bootstrap.min.css">
  	   	
 	    <!-- Owl Stylesheets -->
-	    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-	    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+	    <link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css">
+	    <link rel="stylesheet" href="../owlcarousel/assets/owl.theme.default.min.css">
 
  	   	<!-- Costum made -->
- 	   	<link rel="stylesheet" type="text/css" media="all" href="css/costum.css">
+ 	   	<link rel="stylesheet" type="text/css" media="all" href="../css/costum.css">
 		
 		<!-- Special font -->
 		<link href="http://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet" type="text/css" />
 
 		<!-- javascript -->
-		<script src="vendors/jquery.min.js"></script>
-	    <script src="owlcarousel/owl.carousel.js"></script>
+		<script src="../vendors/jquery.min.js"></script>
+	    <script src="../owlcarousel/owl.carousel.js"></script>
 
 	</head>
 
@@ -42,13 +42,13 @@
 		      <a class="navbar-brand" href="LoggedIn.php"></a>
 		    </div>
 		 	
-		 	<form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
+		 	<form action="SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
 				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" required onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			</form>
-			<form action="includes/Utskra.php" name="Utskra" method="POST" class="form-signin">	
+			<form action="Utskra.php" name="Utskra" method="POST" class="form-signin">	
 				<ul class="nav navbar-nav navbar-right">
 				<?php echo $_SESSION['username']; ?>
 					<button name="Utskra" class="btn btn-primary btn-lg">Utskra</button>
@@ -59,9 +59,9 @@
 		</nav>
 
 		<?php 
-			//include "includes/reviewShow.php";
-			include "includes/veitingastadir.php";
-			include "includes/reviewSubmit.php";
+			//include "reviewShow.php";
+			include "veitingastadir.php";
+			include "reviewSubmit.php";
 		?>
 
 		<script src="js/bootstrap.min.js"></script>

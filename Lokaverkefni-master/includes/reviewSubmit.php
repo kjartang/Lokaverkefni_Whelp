@@ -10,7 +10,7 @@
 		$result = "INSERT INTO review (review, reviewName) VALUES('$review', '$reviewName')" or die("Failed to query database ".mysqli_error($conn));
 
 		if ($conn->query($result) === TRUE) {
-		    header("Location: LoggedIn.php");
+		    header("Location: ../LoggedIn.php");
 		} else {
 		    echo "Error: " . $result . "<br>" . $conn->error;
 		}

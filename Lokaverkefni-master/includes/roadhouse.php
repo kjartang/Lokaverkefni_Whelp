@@ -1,8 +1,5 @@
-<?php 
-include "connect.php"; 
-include "nyskra.php";
-include "innskra.php";
-?>
+<?php session_start(); ?>
+<?php include "connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -58,7 +55,7 @@ include "innskra.php";
 
 		      <form action="SearchBar.php" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
-				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" maxlength="30" required onfocus="this.value=''">
+				<input type="text" value="Veitingastadir.." name="search" class="form-control" maxlength="30" onfocus="this.value=''">
 				<input type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>	
@@ -73,20 +70,20 @@ include "innskra.php";
                             <h4 class="modal-title" id="myModalLabel">Nýskráning</h4>
                           </div>
                           <div class="modal-body">
-                            <form action="" method="POST" class="form-signin">
+                            <form action="nyskra.php" method="POST" class="form-signin">
                             	<div>Nafn:</div>
                                 <label for="name" class="sr-only">Nafn</label>
-                                <input name="name" type="text" id="name" class="form-control" required autofocus>
+                                <input name="name" type="text" id="name" class="form-control" placeholder="Dæmi: Pétur" required autofocus>
                                 <div>Notendanafn:</div>
                                 <label for="username" class="sr-only">Notendanafn</label>
-                                <input name="username" type="text" id="username" class="form-control" required autofocus>
+                                <input name="username" type="text" id="username" class="form-control" placeholder="Dæmi: Petur1" required autofocus>
                                 <div>Netfang:</div>
                                 <label for="inputEmail" class="sr-only">Netfang</label>
-                                <input name="email" type="email" id="email" class="form-control" placeholder="Dæmi@gmail.com" required autofocus>
+                                <input name="email" type="text" id="email" class="form-control" placeholder="Petur1@hotmail.com" required autofocus>
                                 <div>Lykilorð:</div>
                                 <label for="inputPassword" class="sr-only">Lykilorð</label>
-                                <input name="password" type="password" id="password" class="form-control" placeholder="**********" required="10">
-                                <button class="btn btn-lg btn-primary btn-block" name="nyskra" id="nyskra" type="submit">Innskrá</button>       
+                                <input name="password" type="password" id="password" class="form-control" placeholder="Lykilorð" required="10">
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>       
                             </form>
                            <div class="modal-footer">
 				              <div class="modal-footer">
@@ -106,12 +103,12 @@ include "innskra.php";
 		                <h4 class="modal-title" id="myModalLabel">Innskráning</h4>
 		              </div>
 		              <div class="modal-body">
-		                <form action="" method="POST" class="form-signin">
+		                <form action="innskra.php" method="POST" class="form-signin">
 		                	<label for="inputUsername" class="sr-only">Notendanafn</label>
-		                	<input name="username" type="text" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
+		                	<input name="username" type="username" id="inputUsername" class="form-control" placeholder="Notendanafn" required autofocus>
 		                	<label for="inputPassword" class="sr-only">Lykilorð</label>
 		                	<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Lykilorð" required="10">
-		                	<button class="btn btn-lg btn-primary btn-block" name="innskra" id"innskra" type="submit">Innskrá</button>
+		                	<button class="btn btn-lg btn-primary btn-block" type="submit">Innskrá</button>
 		                </form>
 		              </div>
 		              <div class="modal-footer">
@@ -124,63 +121,71 @@ include "innskra.php";
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-
-
-	    <!--  Myndaramminn -->
+		 <div class="row">
 		  <div class="col-md-3">
 		    <div class="thumbnail">
 		      <div id="display">
-		        <img src="../images/002.png" alt="Lights" style="width:100%">
+		        <img src="../images/hambf.jpg" alt="Lights" style="width:100%">
 		        </div>
 		      </div>
 		    </div>
-		<div class="upplysingarV">
-	   <div class="col-md-1">
-		   <?php 	
-			    $sql = "SELECT location, open FROM restaurant_info WHERE location like '%Höfðatorg%'";
-				$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-						     // output data of each row
-						     while($row = $result->fetch_assoc()) {
-						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
-						     }
-						} else {
-						     echo "0 results";
-						} 
-			?>
-		</div>
-		<div class="col-md-1">
-			<?php 	
-				$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Kringlan%'";
-				$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-						     // output data of each row
-						     while($row = $result->fetch_assoc()) {
-						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
-						     }
-						} else {
-						     echo "0 results";
-						} 
-			?>
-		</div>
-		<div class="col-md-1">
-		    <?php
-		    	$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Akureyri%'";
-				$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-						     // output data of each row
-						     while($row = $result->fetch_assoc()) {
-						         echo "<br> Location: ". $row["location"]. " - Opið " . $row["open"] . "<br>";
-						     }
-						} else {
-						     echo "0 results";
-						} 
-		    ?>
+		  </div>
+
+	   <div class="page-header">
+	   		<h3 class="centerIt">OpnunarTímar:</h3>
+	   </div>
+	   <div class="row">
+		   <div class="col-md-1">
+			   <?php 	
+				    $sql = "SELECT location, open FROM restaurant_info WHERE location like '%Höfðatorg%'";
+					$result = $conn->query($sql);
+							if ($result->num_rows > 0) {
+							     // output data of each row
+							     while($row = $result->fetch_assoc()) {
+							         echo "<br> Location: ". $row["location"]. " Opið " . $row["open"] . "<br>";
+							     }
+							} else {
+							     echo "0 results";
+							} 
+				?>
+			</div>
+			<div class="col-md-1">
+				<?php 	
+					$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Kringlan%'";
+					$result = $conn->query($sql);
+							if ($result->num_rows > 0) {
+							     // output data of each row
+							     while($row = $result->fetch_assoc()) {
+							         echo "<br> Location: ". $row["location"]. " Opið " . $row["open"] . "<br>";
+							     }
+							} else {
+							     echo "0 results";
+							} 
+				?>
+			</div>
+			<div class="col-md-1">
+			    <?php
+			    	$sql = "SELECT location, open FROM restaurant_info WHERE location like '%Akureyri%'";
+					$result = $conn->query($sql);
+							if ($result->num_rows > 0) {
+							     // output data of each row
+							     while($row = $result->fetch_assoc()) {
+							         echo "<br> Location: ". $row["location"]. " Opið " . $row["open"] . "<br>";
+							     }
+							} else {
+							     echo "0 results";
+							} 
+			    ?>
+		    </div>
 	    </div>
-	    </div>
+	   	
+	   <div class="page-header">
+	    <h3 class="centerIt">Reviews:</h3>
 	    <div class="reviews">
+	   </div>
 	    	<?php include "reviewShow.php" ?>
 		</div>
+	   
 
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

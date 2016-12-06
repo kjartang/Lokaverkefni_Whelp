@@ -32,13 +32,6 @@ include "includes/innskra.php";
 
 	<body>	
 		<!--Font setting fyrir headerinn -->
-		
-		<style>
-			nav {
-				font-family: 'Shrikhand';
-				font-size: 15px;
-			}
-		</style>
 
 		<!-- Navigation barinn. -->
 		<nav class="navbar-inverse">
@@ -57,10 +50,10 @@ include "includes/innskra.php";
 
 		      </ul>
 
-		      <form action="includes/SearchBar.php" method="POST" class="navbar-form navbar-left">
+		      <form action="" method="POST" class="navbar-form navbar-left">
 		       <div class="form-group">
 				<input type="text" placeholder="Veitingastadir..." name="search" class="form-control" required maxlength="30" onfocus="this.value=''">
-				<input type="submit" class="btn btn-default" value="Leita"/>
+				<input name="searchit" id="searchit" type="submit" class="btn btn-default" value="Leita"/>
 			  </div>
 			 </form>	
 
@@ -125,123 +118,15 @@ include "includes/innskra.php";
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-	    <!--  Myndaramminn -->
-		 <div class="row">
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		    <div id="display_subway">
-		        <img src="images/ThisIsSubway.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_subway" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_subway");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_subway">
-					</div>
-		        </div>
-		       </div>
-		    </div>
-		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		      <div id="display">
-		        <img src="images/002.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_para");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_para">
-					</div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		      <div id="display_kfc">
-		        <img src="images/KfcLogoMan.png" alt="Lights" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_kfc" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_kfc");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_kfc">
-					</div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-md-3">
-		    <div class="thumbnail">
-		      <div id="display_hamborgarafabrikkan">
-		        <img src="images/HamborgaraFabrikkan.png" alt="Nature" style="width:100%">
-		        <div class="caption">
-					<script type="text/javascript">
-						$( "#display_hamborgarafabrikkan" ).one("click", function() {
-					        $.ajax({    //create an ajax request to load_page.php
-						        type: "GET",
-						        url: "includes/veitingastadir.php",             
-						        dataType: "html",   //expect html to be returned                
-						        success: function(response){                    
-						            $("#responsecontainer").html(response); 
-						            var content = document.getElementById("result_hamborgarafabrikkan");
-						            content.innerHTML = content.innerHTML+response;
-
-						        }
-
-						    });
-						});
-					</script>
-					<div id="result_hamborgarafabrikkan">
-					</div>
-		        </div>
-		    </div>
-		  </div>
-		</div>
-		</div>
-	   
-	    <?php
-			//echo '<img src="http://tsuts.tskoli.is/2t/2804963169/Lokaverkefni'. $_SESSION["newsession"] . '"alt="Image not found">';
-			//echo "<br> Restaurants: ". $_SESSION["namesession"]. "<br>";
-	    ?>
-
+	   	<div class="page-header">
+	   	<h3 class="centerIt">Veitingastaðir:</h3>
+	   	</div>
+		   <?php
+		    include "includes/searchBar.php";
+				//echo '<img src="http://tsuts.tskoli.is/2t/2804963169/Lokaverkefni-master'. $_SESSION["newsession"] . '"alt="Image not found">';
+				//echo "<br> Restaurants: ". $_SESSION["namesession"]. "<br>";
+		    ?>
+		
 		<!-- Libraries -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script src="//code.jquery.com/jquery.js"></script>
@@ -259,6 +144,5 @@ include "includes/innskra.php";
 		<!-- Vendors -->
 	    <script src="vendors/highlight.js"></script>
 	    <script src="js/app.js"></script>
-
 	</body>
 </html>
