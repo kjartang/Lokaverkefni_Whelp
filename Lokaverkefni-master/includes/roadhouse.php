@@ -125,7 +125,7 @@
 		  <div class="col-md-3">
 		    <div class="thumbnail">
 		      <div id="display">
-		        <img src="../images/hambf.jpg" alt="Lights" style="width:100%">
+		        <img src="../images/HamborgaraFabrikkan.png" alt="Lights" style="width:100%">
 		        </div>
 		      </div>
 		    </div>
